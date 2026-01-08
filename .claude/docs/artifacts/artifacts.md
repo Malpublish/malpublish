@@ -68,4 +68,5 @@ These are reference copies. To modify, update the source and re-sync.
 
 | Artifact | Date | Description |
 |----------|------|-------------|
+| [original-definition-google-sites.md](original-definition-google-sites.md) | 2026-01-08 | Original malpublish definition from Google Sites (canonical source) |
 | [site-review-2026-01-07.md](site-review-2026-01-07.md) | 2026-01-07 | Site review with improvement opportunities |
