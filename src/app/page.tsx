@@ -126,6 +126,11 @@ export default function Home() {
                 <span><strong>Health and safety risks</strong> — Dangerous medical or safety misinformation</span>
               </li>
             </ul>
+            <p className="text-gray-600 mb-4">
+              You already know the specific terms—plagiarism, deepfakes, clickbait, fabrication.
+              <strong> Malpublishing is the umbrella</strong> that encompasses them all when they
+              violate a community&apos;s publishing standards.
+            </p>
             <p className="text-gray-600 italic">
               Until now, we lacked a word for these publishing failures. Malpublishing names the problem.
             </p>
@@ -148,8 +153,35 @@ export default function Home() {
         </div>
       </section>
 
-      {/* What Isn't Malpublishing */}
+      {/* The Umbrella Term */}
       <section className="py-16 px-4 bg-gray-50">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-8 text-gray-900">
+            The Umbrella Term
+          </h2>
+          <div className="space-y-4 text-gray-700 text-lg">
+            <p>
+              You&apos;ve heard of plagiarism, deepfakes, clickbait, fabrication, and fake news.
+              These are specific publishing failures. <strong>Malpublishing is the umbrella term</strong> that
+              encompasses them all.
+            </p>
+            <p>
+              Just as &ldquo;malpractice&rdquo; covers many specific medical failures, &ldquo;malpublishing&rdquo;
+              covers many specific publishing failures—when they violate a community&apos;s standards.
+            </p>
+            <p>
+              Whether a practice constitutes malpublishing depends on context. Each community defines its own
+              publishing standards. What&apos;s unacceptable in one context may be acceptable in another.
+            </p>
+            <p className="text-[#0074ff] font-medium">
+              This is why publishing policies matter—they make standards explicit.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* What Isn't Malpublishing */}
+      <section className="py-16 px-4">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-8 text-gray-900">
             What Isn&apos;t Malpublishing
