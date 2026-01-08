@@ -97,12 +97,37 @@ export default function Home() {
           </h2>
           <div className="bg-white rounded-lg shadow-sm p-8 border-l-4 border-[#0074ff]">
             <p className="text-lg text-gray-700 mb-4">
-              &ldquo;Malpublish&rdquo; serves as an umbrella term for publishing breaches.
-              <strong> Malpublishing is the cause of misinformation.</strong>
+              &ldquo;Malpublish&rdquo; serves as an umbrella term for publishing breaches—<strong>publishing malpractice</strong>.
+              Just as medical malpractice can cause many different harms, malpublishing is the root cause of:
             </p>
-            <p className="text-gray-600">
-              It highlights the role unethical publishing practices play in eroding public trust
-              in media, academia, and information sources.
+            <ul className="space-y-2 mb-6 text-gray-700">
+              <li className="flex items-start gap-2">
+                <span className="text-[#0074ff] font-bold">•</span>
+                <span><strong>Misinformation</strong> — False information spreads and takes root</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-[#0074ff] font-bold">•</span>
+                <span><strong>Erosion of trust</strong> — Public loses faith in media, academia, and institutions</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-[#0074ff] font-bold">•</span>
+                <span><strong>Harm to individuals</strong> — Defamation, privacy violations, and reputation damage</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-[#0074ff] font-bold">•</span>
+                <span><strong>Social division</strong> — Inflammatory content that polarizes communities</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-[#0074ff] font-bold">•</span>
+                <span><strong>Economic harm</strong> — Fraudulent claims and deceptive advertising</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-[#0074ff] font-bold">•</span>
+                <span><strong>Health and safety risks</strong> — Dangerous medical or safety misinformation</span>
+              </li>
+            </ul>
+            <p className="text-gray-600 italic">
+              Until now, we lacked a word for these publishing failures. Malpublishing names the problem.
             </p>
           </div>
         </div>
@@ -117,8 +142,8 @@ export default function Home() {
           <p className="text-gray-700 text-lg text-center max-w-2xl mx-auto">
             The term combines the prefix &ldquo;mal-&rdquo; (meaning bad or wrongful) with &ldquo;publish.&rdquo;
             This follows established patterns like <em>malpractice</em> and <em>malfunction</em>.
-            It addresses a linguistic gap in discussing the root causes of misinformation
-            rather than just its effects.
+            It addresses a linguistic gap—naming the root cause of information harms
+            rather than just describing their effects.
           </p>
         </div>
       </section>
@@ -155,9 +180,14 @@ export default function Home() {
           </p>
 
           {/* Four Facets */}
-          <h3 className="text-xl font-semibold text-gray-800 mb-6">
+          <h3 className="text-xl font-semibold text-gray-800 mb-4">
             Four Facets of Malpublishing
           </h3>
+          <p className="text-gray-600 mb-6 bg-gray-50 p-4 rounded-lg border-l-4 border-gray-300">
+            What constitutes malpublishing varies by context. A newsroom, a school, a social platform,
+            and a government agency may each define different thresholds. This site provides the framework
+            and vocabulary—<strong>your publishing policy defines what it means for your community</strong>.
+          </p>
           <div className="grid md:grid-cols-2 gap-6 mb-12">
             {FACETS.map((facet) => (
               <div key={facet.title} className="bg-gray-50 rounded-lg p-6">
@@ -251,9 +281,14 @@ export default function Home() {
           <h2 className="text-3xl font-bold mb-4">
             Define Your Publishing Standards
           </h2>
-          <p className="text-lg mb-8 opacity-90">
-            Create a publishing policy that declares your commitments and defines
-            what malpublishing means for your organization.
+          <p className="text-lg mb-4 opacity-90">
+            This site introduces the concept. <strong>PublishingPolicy.org</strong> helps you define
+            what it means for your community—whether you&apos;re a newsroom, school, platform, or
+            individual creator.
+          </p>
+          <p className="text-base mb-8 opacity-80">
+            Create a publishing policy that declares your commitments and sets the standards
+            for your organization.
           </p>
           <Link
             href="https://publishingpolicy.org/build"
