@@ -1,51 +1,5 @@
 import Link from 'next/link'
 
-const FACETS = [
-  {
-    title: 'Content Violations',
-    icon: '1',
-    items: [
-      'Disregarding truth standards and fact-checking',
-      'Spreading false or misleading claims',
-      'Presenting unverified statements as facts',
-      'Failing to promptly correct errors',
-      'Misattributing or plagiarizing content',
-      'Prioritizing sensationalism over accuracy',
-      'Publishing undisclosed AI-generated content',
-    ],
-  },
-  {
-    title: 'Production Failures',
-    icon: '2',
-    items: [
-      'Inadequate fact-checking processes',
-      'Poor editorial oversight',
-      'Rushed publication without review',
-      'Negligent quality control',
-    ],
-  },
-  {
-    title: 'Contractual Breaches',
-    icon: '3',
-    items: [
-      'Violating agreements with contributors',
-      'Ignoring licensing requirements',
-      'Failing to honor commitments to sources',
-      'Breaching terms of use',
-    ],
-  },
-  {
-    title: 'Intent & Negligence',
-    icon: '4',
-    items: [
-      'Deliberate deception of audiences',
-      'Careless disregard for accuracy',
-      'Reckless indifference to harm',
-      'Both intentional and accidental breaches qualify',
-    ],
-  },
-]
-
 const RELATED_TERMS = [
   { term: 'Malpublisher', definition: 'An entity or individual engaging in malpublishing practices' },
   { term: 'Malpublished', definition: 'Content that has been unethically published' },
@@ -160,8 +114,31 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Etymology */}
+      {/* Who Determines */}
       <section className="py-16 px-4">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-8 text-gray-900">
+            Who Determines What Constitutes Malpublishing?
+          </h2>
+          <div className="space-y-4 text-gray-700 text-lg">
+            <p className="text-center">
+              <strong>You do</strong>—or rather, your community does.
+            </p>
+            <p>
+              A newsroom, a school, a social platform, and a government agency may each
+              define different thresholds. What&apos;s unacceptable in journalism might be
+              standard practice in satire.
+            </p>
+            <p>
+              This is why explicit publishing policies matter. Without them, standards
+              remain implicit, inconsistent, and unenforceable.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Etymology */}
+      <section className="py-16 px-4 bg-gray-50">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-8 text-gray-900">
             Etymology & Context
@@ -196,64 +173,43 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Understanding Malpublishing */}
-      <section className="py-16 px-4">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-4 text-gray-900">
-            Understanding Malpublishing
+      {/* Examples of Malpublishing */}
+      <section className="py-16 px-4 bg-gray-50">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-8 text-gray-900">
+            Examples of Malpublishing
           </h2>
-          <p className="text-center text-gray-600 mb-12">
-            What it looks like and how to avoid it
-          </p>
-
-          {/* Four Facets */}
-          <h3 className="text-xl font-semibold text-gray-800 mb-4">
-            Four Facets of Malpublishing
-          </h3>
-          <p className="text-gray-600 mb-6 bg-gray-50 p-4 rounded-lg border-l-4 border-gray-300">
-            What constitutes malpublishing varies by context. A newsroom, a school, a social platform,
-            and a government agency may each define different thresholds. This site provides the framework
-            and vocabulary—<strong>your publishing policy defines what it means for your community</strong>.
-          </p>
-          <div className="grid md:grid-cols-2 gap-6 mb-12">
-            {FACETS.map((facet) => (
-              <div key={facet.title} className="bg-gray-50 rounded-lg p-6">
-                <div className="flex items-center gap-3 mb-4">
-                  <span className="w-8 h-8 bg-[#0074ff] text-white rounded-full flex items-center justify-center font-bold text-sm">
-                    {facet.icon}
-                  </span>
-                  <h4 className="font-semibold text-lg text-gray-900">{facet.title}</h4>
-                </div>
-                <ul className="space-y-2">
-                  {facet.items.map((item) => (
-                    <li key={item} className="text-gray-600 text-sm flex items-start gap-2">
-                      <span className="text-[#0074ff] mt-1">•</span>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-
-          {/* How to Avoid */}
-          <h3 className="text-xl font-semibold text-gray-800 mb-6">
-            How to Avoid It
-          </h3>
-          <div className="space-y-4">
-            {GUIDELINES.map((guideline, index) => (
-              <div key={guideline.title} className="bg-gray-50 rounded-lg p-4">
-                <div className="flex items-start gap-3">
-                  <span className="w-6 h-6 bg-green-500 text-white rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0">
-                    {index + 1}
-                  </span>
-                  <div>
-                    <h4 className="font-semibold text-gray-900 mb-1">{guideline.title}</h4>
-                    <p className="text-gray-600 text-sm">{guideline.description}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
+          <div className="bg-white rounded-lg shadow-sm p-8">
+            <ul className="space-y-3 text-gray-700">
+              <li className="flex items-start gap-3">
+                <span className="text-[#0074ff] font-bold">•</span>
+                <span>Spreading unverified claims as fact</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-[#0074ff] font-bold">•</span>
+                <span>Plagiarizing or failing to attribute sources</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-[#0074ff] font-bold">•</span>
+                <span>Publishing fabricated stories or manipulated images</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-[#0074ff] font-bold">•</span>
+                <span>Clickbait headlines that misrepresent content</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-[#0074ff] font-bold">•</span>
+                <span>Undisclosed sponsored content or AI-generated material</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-[#0074ff] font-bold">•</span>
+                <span>Rushing to publish without fact-checking</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-[#0074ff] font-bold">•</span>
+                <span>Ignoring corrections or doubling down on errors</span>
+              </li>
+            </ul>
           </div>
         </div>
       </section>
@@ -298,6 +254,36 @@ export default function Home() {
           <p className="text-gray-600 text-center max-w-2xl mx-auto">
             This accountability creates a culture of responsible publishing and demands
             better standards from publishers and platforms alike.
+          </p>
+        </div>
+      </section>
+
+      {/* Getting Started */}
+      <section className="py-16 px-4 bg-gray-50">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-4 text-gray-900">
+            Getting Started
+          </h2>
+          <p className="text-center text-gray-600 mb-8">
+            Whether you&apos;re a publisher or platform, these principles apply universally:
+          </p>
+          <div className="space-y-4">
+            {GUIDELINES.map((guideline, index) => (
+              <div key={guideline.title} className="bg-white rounded-lg p-4 shadow-sm">
+                <div className="flex items-start gap-3">
+                  <span className="w-6 h-6 bg-green-500 text-white rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0">
+                    {index + 1}
+                  </span>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-1">{guideline.title}</h4>
+                    <p className="text-gray-600 text-sm">{guideline.description}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+          <p className="text-center text-gray-600 mt-8">
+            Ready to go deeper? Build a publishing policy tailored to your community.
           </p>
         </div>
       </section>
