@@ -36,11 +36,8 @@ export default function Home() {
           <p className="text-xl md:text-2xl opacity-90 mb-2 font-mono">
             /mal-PUB-lish/ (verb)
           </p>
-          <p className="text-2xl md:text-3xl mb-8">
+          <p className="text-2xl md:text-3xl">
             &ldquo;To publish in a manner that constitutes malpractice&rdquo;
-          </p>
-          <p className="text-sm opacity-70">
-            Coined March 2023 by Roarke Clinton
           </p>
         </div>
       </section>
@@ -349,6 +346,39 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Why This Term Exists */}
+      <section className="py-16 px-4">
+        <div className="max-w-2xl mx-auto">
+          <h2 className="text-2xl font-bold text-center mb-8 text-gray-900">
+            Why This Term Exists
+          </h2>
+          <div className="space-y-4 text-gray-700">
+            <p>
+              In 2023, I observed a pattern: we had dozens of words for specific publishing
+              failures—plagiarism, clickbait, deepfakes, fake news—but no umbrella term for
+              the root cause. We named the symptoms but not the disease.
+            </p>
+            <p>
+              This linguistic gap matters. Without a shared term for publishing malpractice,
+              we struggle to discuss it, legislate it, or hold it accountable. We talk past
+              each other using different words for the same problem.
+            </p>
+            <p>
+              &ldquo;Malpublishing&rdquo; is my attempt to fill that gap. It&apos;s an act of free speech
+              advocating for more responsible speech—naming the harm so we can address it.
+            </p>
+            <p>
+              I don&apos;t claim ownership of this idea. I&apos;m offering a tool. If it helps
+              communities define their standards and hold publishers accountable,
+              it will have served its purpose.
+            </p>
+          </div>
+          <p className="text-right text-gray-500 mt-6 text-sm">
+            — Roarke Clinton, March 2023
+          </p>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-20 px-4 bg-[#0074ff] text-white">
         <div className="max-w-3xl mx-auto text-center">
@@ -410,9 +440,6 @@ export default function Home() {
               </div>
             )}
           </div>
-          <p className="text-xs mt-4 opacity-70">
-            &ldquo;Malpublish&rdquo; coined March 2023 by Roarke Clinton
-          </p>
           <p className="text-sm mt-6 pt-4 border-t border-gray-700">
             Want to champion a healthier information ecosystem?{' '}
             <a href="#" className="text-[#0074ff] hover:underline">
