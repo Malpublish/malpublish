@@ -368,9 +368,9 @@ export default function Home() {
               advocating for more responsible speech—naming the harm so we can address it.
             </p>
             <p>
-              I don&apos;t claim ownership of this idea. I&apos;m offering a tool. If it helps
-              communities define their standards and hold publishers accountable,
-              it will have served its purpose.
+              I offer this term to the world—and publish it here to give the concept
+              a clear, stable definition. If it helps communities define their standards
+              and hold publishers accountable, it will have served its purpose.
             </p>
           </div>
           <p className="text-right text-gray-500 mt-6 text-sm">
