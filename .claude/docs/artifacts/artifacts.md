@@ -64,4 +64,8 @@ These are reference copies. To modify, update the source and re-sync.
 
 ---
 
-<!-- CUSTOMIZE: Add artifact directories as needed -->
+## Index
+
+| Artifact | Date | Description |
+|----------|------|-------------|
+| [site-review-2026-01-07.md](site-review-2026-01-07.md) | 2026-01-07 | Site review with improvement opportunities |
