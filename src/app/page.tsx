@@ -97,8 +97,8 @@ export default function Home() {
           </h2>
           <div className="bg-white rounded-lg shadow-sm p-8 border-l-4 border-[#0074ff]">
             <p className="text-lg text-gray-700 mb-4">
-              &ldquo;Malpublish&rdquo; serves as an umbrella term for publishing breaches—<strong>publishing malpractice</strong>.
-              Just as medical malpractice can cause many different harms, malpublishing is the root cause of:
+              Publishing failures cause real harm. When publishers breach ethical standards,
+              the consequences ripple through society:
             </p>
             <ul className="space-y-2 mb-6 text-gray-700">
               <li className="flex items-start gap-2">
@@ -126,30 +126,10 @@ export default function Home() {
                 <span><strong>Health and safety risks</strong> — Dangerous medical or safety misinformation</span>
               </li>
             </ul>
-            <p className="text-gray-600 mb-4">
-              You already know the specific terms—plagiarism, deepfakes, clickbait, fabrication.
-              <strong> Malpublishing is the umbrella</strong> that encompasses them all when they
-              violate a community&apos;s publishing standards.
-            </p>
             <p className="text-gray-600 italic">
-              Until now, we lacked a word for these publishing failures. Malpublishing names the problem.
+              These harms don&apos;t exist in isolation. They share a common root cause: publishing malpractice.
             </p>
           </div>
-        </div>
-      </section>
-
-      {/* Etymology */}
-      <section className="py-16 px-4">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-8 text-gray-900">
-            Etymology & Context
-          </h2>
-          <p className="text-gray-700 text-lg text-center max-w-2xl mx-auto">
-            The term combines the prefix &ldquo;mal-&rdquo; (meaning bad or wrongful) with &ldquo;publish.&rdquo;
-            This follows established patterns like <em>malpractice</em> and <em>malfunction</em>.
-            It addresses a linguistic gap—naming the root cause of information harms
-            rather than just describing their effects.
-          </p>
         </div>
       </section>
 
@@ -177,6 +157,21 @@ export default function Home() {
               This is why publishing policies matter—they make standards explicit.
             </p>
           </div>
+        </div>
+      </section>
+
+      {/* Etymology */}
+      <section className="py-16 px-4">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-8 text-gray-900">
+            Etymology & Context
+          </h2>
+          <p className="text-gray-700 text-lg text-center max-w-2xl mx-auto">
+            The term combines the prefix &ldquo;mal-&rdquo; (meaning bad or wrongful) with &ldquo;publish.&rdquo;
+            This follows established patterns like <em>malpractice</em> and <em>malfunction</em>.
+            It addresses a linguistic gap—naming the root cause of information harms
+            rather than just describing their effects.
+          </p>
         </div>
       </section>
 
