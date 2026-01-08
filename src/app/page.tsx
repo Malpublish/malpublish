@@ -317,28 +317,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Reader Responsibility */}
-      <section className="py-16 px-4">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-8 text-gray-900">
-            Reader Responsibility
-          </h2>
-          <p className="text-gray-700 text-lg text-center max-w-2xl mx-auto mb-6">
-            Consumers should approach content critically, question sources, and call out
-            apparent malpublishing.
-          </p>
-          <p className="text-gray-600 text-center max-w-2xl mx-auto">
-            This accountability creates a culture of responsible publishing and demands
-            better standards from publishers and platforms alike.
-          </p>
-        </div>
-      </section>
-
-      {/* Getting Started */}
+      {/* For Publishers: Baseline Practices */}
       <section className="py-16 px-4 bg-gray-50">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-4 text-gray-900">
-            Getting Started
+            For Publishers: Baseline Practices
           </h2>
           <p className="text-center text-gray-600 mb-8">
             These are widely-adopted baseline practices that form the foundation of many publishing policies:
@@ -366,26 +349,29 @@ export default function Home() {
 
       {/* CTA */}
       <section className="py-20 px-4 bg-[#0074ff] text-white">
-        <div className="max-w-2xl mx-auto text-center">
+        <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-4">
-            Define Your Publishing Standards
+            Take the Next Step
           </h2>
-          <p className="text-lg mb-4 opacity-90">
-            This site introduces the concept. <strong>PublishingPolicy.org</strong> helps you define
-            what it means for your community—whether you&apos;re a newsroom, school, platform, or
-            individual creator.
+          <p className="text-lg mb-8 opacity-90">
+            This site introduces the concept. <strong>PublishingPolicy.org</strong> goes deeper—whether
+            you&apos;re a publisher defining standards or a reader understanding them.
           </p>
-          <p className="text-base mb-8 opacity-80">
-            Create a publishing policy that declares your commitments and sets the standards
-            for your organization.
-          </p>
-          <Link
-            href="https://publishingpolicy.org/build"
-            className="inline-block bg-white text-[#0074ff] px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg"
-          >
-            Build Your Publishing Policy
-          </Link>
-          <p className="mt-4 text-sm opacity-70">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <Link
+              href="https://publishingpolicy.org/build"
+              className="inline-block bg-white text-[#0074ff] px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg min-w-[280px]"
+            >
+              Build Your Publishing Policy
+            </Link>
+            <Link
+              href="https://publishingpolicy.org"
+              className="inline-block bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-[#0074ff] transition-colors text-lg min-w-[280px]"
+            >
+              What Is a Publishing Policy?
+            </Link>
+          </div>
+          <p className="mt-6 text-sm opacity-70">
             Free at publishingpolicy.org
           </p>
         </div>
