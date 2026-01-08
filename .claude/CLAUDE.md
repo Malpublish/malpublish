@@ -49,9 +49,24 @@ Workflow: `.github/workflows/deploy.yml`
 
 ---
 
-## No Credentials Needed
+## Credentials
 
-This is a static site with no backend. GitHub Pages deployment uses repository permissions.
+Shares credentials with PublishingPolicy (same InformationEcosystem org).
+
+```bash
+echo $GITHUB_TOKEN                    # Should show token
+echo $PUBLISHINGPOLICY_GITHUB_TOKEN   # Same token (shared)
+```
+
+**Note**: GitHub Actions uses repo permissions for deployment. Claude needs the token for `git push`.
+
+---
+
+## MCP Servers
+
+| Server | Purpose |
+|--------|---------|
+| GitHub | Repository operations (PRs, issues, etc.) |
 
 ---
 

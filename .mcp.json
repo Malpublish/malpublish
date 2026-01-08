@@ -1,0 +1,14 @@
+{
+  "version": "1.0",
+  "project": "Malpublish",
+  "description": "Malpublish - Static site with shared InformationEcosystem credentials",
+  "mcpServers": {
+    "github": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-github"],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "${PUBLISHINGPOLICY_GITHUB_TOKEN}"
+      }
+    }
+  }
+}
