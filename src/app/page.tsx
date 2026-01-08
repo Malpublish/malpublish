@@ -122,12 +122,18 @@ export default function Home() {
           </h2>
           <div className="space-y-4 text-gray-700 text-lg">
             <p className="text-center">
-              <strong>You do</strong>—or rather, your community does.
+              <strong>Your community does</strong>—but &ldquo;community&rdquo; isn&apos;t a single entity.
             </p>
             <p>
-              A newsroom, a school, a social platform, and a government agency may each
-              define different thresholds. What&apos;s unacceptable in journalism might be
-              standard practice in satire.
+              It&apos;s the layered stack of publishing policies that apply to you: your jurisdiction,
+              your industry, your organization, and your specific publication or channel. Each layer
+              may set different standards, and you operate under all of them.
+            </p>
+            <p>
+              A newsroom, a school, a social platform, and a government agency each define
+              different thresholds. What&apos;s unacceptable in journalism might be standard
+              practice in satire. The same organization may face different standards in
+              different regions.
             </p>
             <p>
               This is why explicit publishing policies matter. Without them, standards
@@ -137,16 +143,78 @@ export default function Home() {
         </div>
       </section>
 
-      {/* What Isn't Malpublishing */}
+      {/* How Publishing Standards Layer */}
       <section className="py-16 px-4 bg-gray-50">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-8 text-gray-900">
+            How Publishing Standards Layer
+          </h2>
+          <div className="space-y-4 text-gray-700 text-lg mb-8">
+            <p>
+              Publishing standards don&apos;t exist in isolation—they stack. Just as legal frameworks
+              layer from international to national to local, publishing policies cascade through
+              multiple levels:
+            </p>
+          </div>
+          <div className="bg-white rounded-lg shadow-sm p-6 mb-8 font-mono text-sm text-gray-600">
+            <div className="space-y-1">
+              <p>Jurisdiction <span className="text-gray-400">(national laws, press regulations)</span></p>
+              <p className="pl-4">└── Region <span className="text-gray-400">(state/provincial requirements)</span></p>
+              <p className="pl-8">└── Industry <span className="text-gray-400">(journalism, academia, entertainment)</span></p>
+              <p className="pl-12">└── Organization <span className="text-gray-400">(your company or institution)</span></p>
+              <p className="pl-16">└── Publication <span className="text-gray-400">(specific channel or section)</span></p>
+            </div>
+          </div>
+          <p className="text-gray-700 text-lg mb-8">
+            The same action can be malpublishing in one context and acceptable in another.
+            Consider these scenarios:
+          </p>
+          <div className="space-y-4">
+            <div className="bg-white rounded-lg p-5 shadow-sm border-l-4 border-[#0074ff]">
+              <h4 className="font-semibold text-gray-900 mb-2">AI-Generated Images</h4>
+              <p className="text-gray-600">
+                A news outlet&apos;s standards require disclosure of any AI-generated visuals—publishing
+                without it is malpublishing. A meme community, where AI manipulation is expected and
+                contextually obvious, may have no such requirement.
+              </p>
+            </div>
+            <div className="bg-white rounded-lg p-5 shadow-sm border-l-4 border-[#0074ff]">
+              <h4 className="font-semibold text-gray-900 mb-2">Sponsored Content</h4>
+              <p className="text-gray-600">
+                Journalism ethics require clear separation of editorial and advertising. Influencer
+                marketing operates under different disclosure norms. What&apos;s malpublishing in a
+                newspaper may be standard practice on social media—though both contexts have their
+                own evolving standards.
+              </p>
+            </div>
+            <div className="bg-white rounded-lg p-5 shadow-sm border-l-4 border-[#0074ff]">
+              <h4 className="font-semibold text-gray-900 mb-2">Cross-Regional Operations</h4>
+              <p className="text-gray-600">
+                Organization X operating in California faces different disclosure requirements than
+                its Texas office. The same content strategy may be compliant in one region and
+                malpublishing in another—even within the same company.
+              </p>
+            </div>
+          </div>
+          <p className="text-[#0074ff] font-medium text-lg mt-8 text-center">
+            This is why making your publishing policy explicit matters—it defines which layer you&apos;re operating at.
+          </p>
+        </div>
+      </section>
+
+      {/* What Isn't Malpublishing */}
+      <section className="py-16 px-4">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-8 text-gray-900">
             What Isn&apos;t Malpublishing
           </h2>
+          <p className="text-gray-600 text-center mb-6">
+            While standards vary by context, most publishing communities share these baseline understandings:
+          </p>
           <div className="bg-white rounded-lg shadow-sm p-8 border-l-4 border-green-500">
             <p className="text-lg text-gray-700 mb-4">
               Writing opinions, theories, or fiction doesn&apos;t constitute malpublishing
-              if practices remain ethical.
+              when practices remain ethical within the applicable standards.
             </p>
             <p className="text-gray-600">
               Content must be <strong>clearly labeled</strong> appropriately, and audiences
@@ -154,16 +222,24 @@ export default function Home() {
               A clearly marked opinion piece or satirical article isn&apos;t malpublishing—but
               presenting fiction as fact is.
             </p>
+            <p className="text-gray-500 text-sm mt-4 italic">
+              Note: Some communities may have stricter standards. Academic publishing, for example,
+              may consider certain practices malpublishing that would be acceptable elsewhere.
+            </p>
           </div>
         </div>
       </section>
 
       {/* Examples of Malpublishing */}
-      <section className="py-16 px-4">
+      <section className="py-16 px-4 bg-gray-50">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-8 text-gray-900">
             Examples of Malpublishing
           </h2>
+          <p className="text-gray-600 text-center mb-6">
+            These actions are commonly considered malpublishing in many publishing contexts.
+            Whether they apply in your context depends on your applicable standards.
+          </p>
           <div className="bg-white rounded-lg shadow-sm p-8">
             <ul className="space-y-4 text-gray-700">
               <li className="flex items-start gap-3">
@@ -265,7 +341,7 @@ export default function Home() {
             Getting Started
           </h2>
           <p className="text-center text-gray-600 mb-8">
-            Whether you&apos;re a publisher or platform, these principles apply universally:
+            These are widely-adopted baseline practices that form the foundation of many publishing policies:
           </p>
           <div className="space-y-4">
             {GUIDELINES.map((guideline, index) => (
