@@ -80,7 +80,7 @@ export default function Home() {
               </li>
             </ul>
             <p className="text-gray-600 italic">
-              These harms don&apos;t exist in isolation. They share a common root cause: publishing malpractice.
+              These harms don&apos;t exist in isolation. They share a common root cause: publishing malpractice (&quot;malpublishing&quot;).
             </p>
           </div>
         </div>
