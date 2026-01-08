@@ -137,23 +137,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Etymology */}
-      <section className="py-16 px-4 bg-gray-50">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-8 text-gray-900">
-            Etymology & Context
-          </h2>
-          <p className="text-gray-700 text-lg text-center max-w-2xl mx-auto">
-            The term combines the prefix &ldquo;mal-&rdquo; (meaning bad or wrongful) with &ldquo;publish.&rdquo;
-            This follows established patterns like <em>malpractice</em> and <em>malfunction</em>.
-            It addresses a linguistic gap—naming the root cause of information harms
-            rather than just describing their effects.
-          </p>
-        </div>
-      </section>
-
       {/* What Isn't Malpublishing */}
-      <section className="py-16 px-4">
+      <section className="py-16 px-4 bg-gray-50">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-8 text-gray-900">
             What Isn&apos;t Malpublishing
@@ -174,48 +159,63 @@ export default function Home() {
       </section>
 
       {/* Examples of Malpublishing */}
-      <section className="py-16 px-4 bg-gray-50">
+      <section className="py-16 px-4">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-8 text-gray-900">
             Examples of Malpublishing
           </h2>
           <div className="bg-white rounded-lg shadow-sm p-8">
-            <ul className="space-y-3 text-gray-700">
+            <ul className="space-y-4 text-gray-700">
               <li className="flex items-start gap-3">
                 <span className="text-[#0074ff] font-bold">•</span>
-                <span>Spreading unverified claims as fact</span>
+                <span>Publishing <strong>AI-generated deepfakes</strong> without clear, overt disclosure</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-[#0074ff] font-bold">•</span>
-                <span>Plagiarizing or failing to attribute sources</span>
+                <span>A <strong>platform distributing content</strong> that violates its own publishing policy—or the standards of the community it affects</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-[#0074ff] font-bold">•</span>
-                <span>Publishing fabricated stories or manipulated images</span>
+                <span>Clickbait headlines deliberately designed to misrepresent the actual story</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-[#0074ff] font-bold">•</span>
-                <span>Clickbait headlines that misrepresent content</span>
+                <span>Republishing someone&apos;s work without attribution or permission</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-[#0074ff] font-bold">•</span>
-                <span>Undisclosed sponsored content or AI-generated material</span>
+                <span>A publication ignoring corrections and doubling down on false claims</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-[#0074ff] font-bold">•</span>
-                <span>Rushing to publish without fact-checking</span>
+                <span>Sponsored content disguised as independent journalism</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-[#0074ff] font-bold">•</span>
-                <span>Ignoring corrections or doubling down on errors</span>
+                <span>Rushing to publish sensational claims without basic fact-checking</span>
               </li>
             </ul>
           </div>
         </div>
       </section>
 
-      {/* Related Terms */}
+      {/* Etymology */}
       <section className="py-16 px-4 bg-gray-50">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-8 text-gray-900">
+            Etymology & Context
+          </h2>
+          <p className="text-gray-700 text-lg text-center max-w-2xl mx-auto">
+            The term combines the prefix &ldquo;mal-&rdquo; (meaning bad or wrongful) with &ldquo;publish.&rdquo;
+            This follows established patterns like <em>malpractice</em> and <em>malfunction</em>.
+            It addresses a linguistic gap—naming the root cause of information harms
+            rather than just describing their effects.
+          </p>
+        </div>
+      </section>
+
+      {/* Related Terms */}
+      <section className="py-16 px-4">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-8 text-gray-900">
             Related Terms & Derivatives
