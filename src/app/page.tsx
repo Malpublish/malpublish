@@ -27,21 +27,6 @@ export default function Home() {
 
   return (
     <div className="min-h-screen">
-      {/* Support Banner */}
-      <div className="bg-gray-100 py-3 px-4">
-        <div className="max-w-3xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-sm">
-          <p className="text-gray-600">
-            Want to champion a healthier information ecosystem?
-          </p>
-          <a
-            href="#"
-            className="text-[#0074ff] hover:underline font-medium whitespace-nowrap"
-          >
-            Support this project →
-          </a>
-        </div>
-      </div>
-
       {/* Hero Section */}
       <section className="bg-[#0074ff] text-white py-20 px-4">
         <div className="max-w-3xl mx-auto text-center">
@@ -427,6 +412,12 @@ export default function Home() {
           </div>
           <p className="text-xs mt-4 opacity-70">
             &ldquo;Malpublish&rdquo; coined March 2023 by Roarke Clinton
+          </p>
+          <p className="text-sm mt-6 pt-4 border-t border-gray-700">
+            Want to champion a healthier information ecosystem?{' '}
+            <a href="#" className="text-[#0074ff] hover:underline">
+              Support this project
+            </a>
           </p>
         </div>
       </footer>
