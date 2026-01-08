@@ -48,6 +48,33 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://malpublish.org"),
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://malpublish.org/#organization",
+      "name": "Malpublish",
+      "url": "https://malpublish.org",
+      "description": "Defining malpublishing and promoting ethical publishing standards",
+      "founder": {
+        "@type": "Person",
+        "name": "Roarke Clinton"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://malpublish.org/#webpage",
+      "url": "https://malpublish.org",
+      "name": "Malpublish - Definition & Etymology",
+      "description": "Malpublish: To publish in a manner that constitutes malpractice. A term coined in 2023 to address the root causes of misinformation.",
+      "isPartOf": { "@id": "https://malpublish.org/#organization" },
+      "dateCreated": "2023-03-01",
+      "dateModified": "2025-01-08"
+    }
+  ]
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -55,6 +82,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

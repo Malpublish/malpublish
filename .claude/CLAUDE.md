@@ -72,4 +72,6 @@ echo $PUBLISHINGPOLICY_GITHUB_TOKEN   # Same token (shared)
 
 ## Session Lifecycle
 
-1. `git status` → 2. Work → 3. Commit → 4. Push (auto-deploys)
+**Auto-deploy enabled**: After completing work, commit and push immediately. Do not ask for deployment confirmation — GitHub Actions handles the rest.
+
+Flow: `git status` → Work → Build → Commit → Push
