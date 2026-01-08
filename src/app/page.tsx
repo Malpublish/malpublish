@@ -1,4 +1,7 @@
+'use client'
+
 import Link from 'next/link'
+import { useState } from 'react'
 
 const RELATED_TERMS = [
   { term: 'Malpublisher', definition: 'An entity or individual engaging in malpublishing practices' },
@@ -20,14 +23,28 @@ const GUIDELINES = [
 ]
 
 export default function Home() {
+  const [showContact, setShowContact] = useState(false)
+
   return (
     <div className="min-h-screen">
+      {/* Support Banner */}
+      <div className="bg-gray-100 py-3 px-4">
+        <div className="max-w-3xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-sm">
+          <p className="text-gray-600">
+            Want to champion a healthier information ecosystem?
+          </p>
+          <a
+            href="#"
+            className="text-[#0074ff] hover:underline font-medium whitespace-nowrap"
+          >
+            Support this project →
+          </a>
+        </div>
+      </div>
+
       {/* Hero Section */}
       <section className="bg-[#0074ff] text-white py-20 px-4">
         <div className="max-w-3xl mx-auto text-center">
-          <p className="text-lg opacity-80 mb-4">
-            Want to champion a healthier information ecosystem?
-          </p>
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
             Malpublish
           </h1>
@@ -389,12 +406,25 @@ export default function Home() {
             </Link>
             {' '}&mdash; Define what you stand for
           </p>
-          <p className="text-sm">
-            Contact:{' '}
-            <a href="mailto:stopmalpublishing@gmail.com" className="hover:text-white">
-              stopmalpublishing@gmail.com
-            </a>
-          </p>
+          <div className="text-sm">
+            {!showContact ? (
+              <button
+                onClick={() => setShowContact(true)}
+                className="text-gray-400 hover:text-white transition-colors"
+              >
+                Contact →
+              </button>
+            ) : (
+              <div className="space-y-2">
+                <a href="mailto:stopmalpublishing@gmail.com" className="text-white hover:underline">
+                  stopmalpublishing@gmail.com
+                </a>
+                <p className="text-xs text-gray-500 max-w-md mx-auto">
+                  Due to high volume, I may not be able to respond to every inquiry—but I&apos;ll reach out if I can.
+                </p>
+              </div>
+            )}
+          </div>
           <p className="text-xs mt-4 opacity-70">
             &ldquo;Malpublish&rdquo; coined March 2023 by Roarke Clinton
           </p>
