@@ -5,29 +5,44 @@ const FACETS = [
     title: 'Content Violations',
     icon: '1',
     items: [
-      'Disregarding ethical standards',
-      'Spreading false or deceptive claims',
-      'Presenting opinions as facts',
-      'Failing to retract errors promptly',
-      'Misattribution or unauthorized use',
-      'Prioritizing sensationalism',
-      'Undisclosed AI-generated content',
+      'Disregarding truth standards and fact-checking',
+      'Spreading false or misleading claims',
+      'Presenting unverified statements as facts',
+      'Failing to promptly correct errors',
+      'Misattributing or plagiarizing content',
+      'Prioritizing sensationalism over accuracy',
+      'Publishing undisclosed AI-generated content',
     ],
   },
   {
     title: 'Production Failures',
     icon: '2',
-    description: 'Negligent quality control across all formats and media types, including inadequate fact-checking, poor editorial oversight, and rushed publication processes.',
+    items: [
+      'Inadequate fact-checking processes',
+      'Poor editorial oversight',
+      'Rushed publication without review',
+      'Negligent quality control',
+    ],
   },
   {
-    title: 'Contractual Obligations',
+    title: 'Contractual Breaches',
     icon: '3',
-    description: 'Breach of agreements with contributors, authors, and sources. This includes violating terms of use, ignoring licensing requirements, and failing to honor commitments.',
+    items: [
+      'Violating agreements with contributors',
+      'Ignoring licensing requirements',
+      'Failing to honor commitments to sources',
+      'Breaching terms of use',
+    ],
   },
   {
     title: 'Intent & Negligence',
     icon: '4',
-    description: 'Includes both deliberate violations and accidental breaches. Whether intentional deception or careless disregard, both constitute malpublishing.',
+    items: [
+      'Deliberate deception of audiences',
+      'Careless disregard for accuracy',
+      'Reckless indifference to harm',
+      'Both intentional and accidental breaches qualify',
+    ],
   },
 ]
 
@@ -35,21 +50,19 @@ const RELATED_TERMS = [
   { term: 'Malpublisher', definition: 'An entity or individual engaging in malpublishing practices' },
   { term: 'Malpublished', definition: 'Content that has been unethically published' },
   { term: 'Malpublication', definition: 'A specific instance of malpublished content' },
+  { term: 'Malpublishment', definition: 'An act or result of publishing malpractice' },
   { term: 'Malpublicity', definition: 'Exposure resulting from malpublishing practices' },
   { term: 'Malpublishing', definition: 'The practice or act of publishing unethically' },
   { term: 'Malpublishable', definition: 'Content that could potentially be malpublished' },
-  { term: 'Malpublicist', definition: 'One who promotes or engages in malpublishing' },
+  { term: 'Malpublicist', definition: 'One who engages in malpublishing' },
 ]
 
 const GUIDELINES = [
-  { title: 'Fact-check all information', description: 'Verify claims with multiple reliable sources before publishing.' },
-  { title: 'Distinguish facts from opinions', description: 'Clearly label opinion pieces and editorials as such.' },
-  { title: 'Provide proper attribution', description: 'Credit sources, quotes, and referenced material appropriately.' },
-  { title: 'Engage in responsible editing', description: 'Ensure editorial processes prioritize accuracy over speed.' },
-  { title: 'Be transparent with corrections', description: 'When errors occur, correct them promptly and visibly.' },
-  { title: 'Respect intellectual property', description: 'Obtain proper permissions and honor licensing agreements.' },
-  { title: 'Use plagiarism detection', description: 'Employ tools to ensure content originality.' },
-  { title: 'Make corrections immediately', description: 'Any ethical violation risks the entire piece\'s integrity.' },
+  { title: 'Verify facts with multiple sources', description: 'Cross-reference claims through credible, independent sources before publishing.' },
+  { title: 'Label content clearly', description: 'Distinguish news from opinion, editorial, sponsored content, and AI-generated material.' },
+  { title: 'Attribute and respect rights', description: 'Credit sources properly and honor intellectual property and licensing agreements.' },
+  { title: 'Correct errors promptly', description: 'When mistakes occur, fix them quickly and visibly—transparency builds trust.' },
+  { title: 'Maintain independence', description: 'Keep editorial decisions separate from advertiser or sponsor influence.' },
 ]
 
 export default function Home() {
@@ -110,36 +123,78 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Four Facets */}
+      {/* What Isn't Malpublishing */}
       <section className="py-16 px-4 bg-gray-50">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-8 text-gray-900">
+            What Isn&apos;t Malpublishing
+          </h2>
+          <div className="bg-white rounded-lg shadow-sm p-8 border-l-4 border-green-500">
+            <p className="text-lg text-gray-700 mb-4">
+              Writing opinions, theories, or fiction doesn&apos;t constitute malpublishing
+              if practices remain ethical.
+            </p>
+            <p className="text-gray-600">
+              Content must be <strong>clearly labeled</strong> appropriately, and audiences
+              shouldn&apos;t be deceived about the content&apos;s intent or factual accuracy.
+              A clearly marked opinion piece or satirical article isn&apos;t malpublishing—but
+              presenting fiction as fact is.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Understanding Malpublishing */}
+      <section className="py-16 px-4">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-4 text-gray-900">
-            Four Facets of Malpublishing
+            Understanding Malpublishing
           </h2>
           <p className="text-center text-gray-600 mb-12">
-            Malpublishing encompasses four overlapping categories
+            What it looks like and how to avoid it
           </p>
-          <div className="grid md:grid-cols-2 gap-6">
+
+          {/* Four Facets */}
+          <h3 className="text-xl font-semibold text-gray-800 mb-6">
+            Four Facets of Malpublishing
+          </h3>
+          <div className="grid md:grid-cols-2 gap-6 mb-12">
             {FACETS.map((facet) => (
-              <div key={facet.title} className="bg-white rounded-lg shadow-sm p-6">
+              <div key={facet.title} className="bg-gray-50 rounded-lg p-6">
                 <div className="flex items-center gap-3 mb-4">
                   <span className="w-8 h-8 bg-[#0074ff] text-white rounded-full flex items-center justify-center font-bold text-sm">
                     {facet.icon}
                   </span>
-                  <h3 className="font-semibold text-lg text-gray-900">{facet.title}</h3>
+                  <h4 className="font-semibold text-lg text-gray-900">{facet.title}</h4>
                 </div>
-                {facet.items ? (
-                  <ul className="space-y-2">
-                    {facet.items.map((item) => (
-                      <li key={item} className="text-gray-600 text-sm flex items-start gap-2">
-                        <span className="text-[#0074ff] mt-1">•</span>
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                ) : (
-                  <p className="text-gray-600 text-sm">{facet.description}</p>
-                )}
+                <ul className="space-y-2">
+                  {facet.items.map((item) => (
+                    <li key={item} className="text-gray-600 text-sm flex items-start gap-2">
+                      <span className="text-[#0074ff] mt-1">•</span>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+
+          {/* How to Avoid */}
+          <h3 className="text-xl font-semibold text-gray-800 mb-6">
+            How to Avoid It
+          </h3>
+          <div className="space-y-4">
+            {GUIDELINES.map((guideline, index) => (
+              <div key={guideline.title} className="bg-gray-50 rounded-lg p-4">
+                <div className="flex items-start gap-3">
+                  <span className="w-6 h-6 bg-green-500 text-white rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0">
+                    {index + 1}
+                  </span>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-1">{guideline.title}</h4>
+                    <p className="text-gray-600 text-sm">{guideline.description}</p>
+                  </div>
+                </div>
               </div>
             ))}
           </div>
@@ -147,14 +202,14 @@ export default function Home() {
       </section>
 
       {/* Related Terms */}
-      <section className="py-16 px-4">
+      <section className="py-16 px-4 bg-gray-50">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-8 text-gray-900">
             Related Terms & Derivatives
           </h2>
           <div className="overflow-hidden rounded-lg border border-gray-200">
             <table className="w-full">
-              <thead className="bg-gray-50">
+              <thead className="bg-gray-100">
                 <tr>
                   <th className="px-6 py-3 text-left text-sm font-semibold text-gray-900">Term</th>
                   <th className="px-6 py-3 text-left text-sm font-semibold text-gray-900">Definition</th>
@@ -173,27 +228,20 @@ export default function Home() {
         </div>
       </section>
 
-      {/* How to Avoid */}
-      <section className="py-16 px-4 bg-gray-50">
+      {/* Reader Responsibility */}
+      <section className="py-16 px-4">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-8 text-gray-900">
-            How to Avoid Malpublishing
+            Reader Responsibility
           </h2>
-          <div className="grid md:grid-cols-2 gap-4">
-            {GUIDELINES.map((guideline, index) => (
-              <div key={guideline.title} className="bg-white rounded-lg p-4 shadow-sm">
-                <div className="flex items-start gap-3">
-                  <span className="w-6 h-6 bg-[#0074ff] text-white rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0">
-                    {index + 1}
-                  </span>
-                  <div>
-                    <h3 className="font-semibold text-gray-900 mb-1">{guideline.title}</h3>
-                    <p className="text-gray-600 text-sm">{guideline.description}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+          <p className="text-gray-700 text-lg text-center max-w-2xl mx-auto mb-6">
+            Consumers should approach content critically, question sources, and call out
+            apparent malpublishing.
+          </p>
+          <p className="text-gray-600 text-center max-w-2xl mx-auto">
+            This accountability creates a culture of responsible publishing and demands
+            better standards from publishers and platforms alike.
+          </p>
         </div>
       </section>
 
