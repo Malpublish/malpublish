@@ -95,7 +95,7 @@ export default function Home() {
           </div>
 
           {/* Definition Box */}
-          <div className="border-l-2 border-white/50 pl-6 py-2 max-w-xl mx-auto">
+          <div className="border-l-2 border-white/50 pl-6 py-2 max-w-md mx-auto">
             <p className="text-2xl leading-relaxed">
               To publish in a manner that constitutes malpractice
             </p>
