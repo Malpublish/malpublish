@@ -81,49 +81,18 @@ export default function Home() {
         </div>
       </nav>
 
-      {/* Hero - Dictionary Style with Blue Background */}
-      <section id="definition" className="pt-16 pb-20 px-4 bg-[#0074ff] text-white">
-        <div className="max-w-3xl mx-auto">
-          {/* Word Entry */}
-          <div className="mb-8 text-center">
-            <h1 className="text-5xl md:text-6xl font-sans font-bold mb-2">
-              malpublish
-            </h1>
-            <p className="text-white/80 text-lg font-mono">
-              /mal-PUB-lish/ <span className="text-white/60 ml-2">verb</span>
-            </p>
-          </div>
-
-          {/* Definition Box */}
-          <div className="flex justify-center">
-            <div className="border-l-2 border-white/50 pl-6 py-2 text-left">
-              <p className="text-2xl leading-relaxed">
-                To publish in a manner that constitutes malpractice
-              </p>
-            </div>
-          </div>
-
-          {/* Etymology Preview */}
-          <p className="mt-6 text-white/70 text-sm text-center">
-            <span className="font-semibold text-white">Origin:</span> 2023, coined by Roarke Clinton.
-            From <em>mal-</em> (bad, wrongful) + <em>publish</em>, following the pattern of <em>malpractice</em>.
+      {/* Hero Section */}
+      <section id="definition" className="bg-[#0074ff] text-white py-20 px-4">
+        <div className="max-w-3xl mx-auto text-center">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+            Malpublish
+          </h1>
+          <p className="text-xl md:text-2xl opacity-90 mb-2 font-mono">
+            /mal-PUB-lish/ (verb)
           </p>
-
-          {/* Quick Links */}
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-2 text-sm">
-            <span className="text-white/60">Jump to:</span>
-            {['Examples', 'Guidelines', 'Related Terms', 'Call to Action'].map((link, i) => (
-              <span key={link} className="flex items-center gap-2">
-                {i > 0 && <span className="w-1 h-1 rounded-full bg-white/40 ring-1 ring-white/60" />}
-                <a
-                  href={`#${link.toLowerCase().replace(/ /g, '-')}`}
-                  className="text-white hover:underline"
-                >
-                  {link}
-                </a>
-              </span>
-            ))}
-          </div>
+          <p className="text-2xl md:text-3xl">
+            &ldquo;To publish in a manner that constitutes malpractice&rdquo;
+          </p>
         </div>
       </section>
 
