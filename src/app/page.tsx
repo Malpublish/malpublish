@@ -28,6 +28,7 @@ const SECTIONS = [
   { id: 'etymology', label: 'Etymology' },
   { id: 'guidelines', label: 'Guidelines' },
   { id: 'origin', label: 'Origin' },
+  { id: 'call-to-action', label: 'Call to Action' },
 ]
 
 export default function Home() {
@@ -66,15 +67,15 @@ export default function Home() {
               className="group flex items-center gap-2 justify-end"
               title={label}
             >
-              <span className={`text-xs transition-opacity ${
-                activeSection === id ? 'opacity-100 text-gray-700' : 'opacity-0 group-hover:opacity-100 text-gray-500'
+              <span className={`text-xs transition-colors ${
+                activeSection === id ? 'text-gray-700' : 'text-gray-400'
               }`}>
                 {label}
               </span>
               <span className={`w-2 h-2 rounded-full transition-all ${
                 activeSection === id
                   ? 'bg-[#0074ff] scale-125'
-                  : 'bg-gray-300 group-hover:bg-gray-400'
+                  : 'bg-gray-300 group-hover:bg-[#0074ff]/40'
               }`} />
             </a>
           ))}
