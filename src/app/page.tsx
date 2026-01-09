@@ -27,9 +27,8 @@ const SECTIONS = [
   { id: 'why-matters', label: 'Why It Matters' },
   { id: 'umbrella', label: 'Umbrella Term' },
   { id: 'who-determines', label: 'Who Determines' },
-  { id: 'standards', label: 'Standards' },
-  { id: 'not-malpublishing', label: 'Not Malpublishing' },
   { id: 'examples', label: 'Examples' },
+  { id: 'not-malpublishing', label: 'Not Malpublishing' },
   { id: 'etymology', label: 'Etymology' },
   { id: 'related-terms', label: 'Related Terms' },
   { id: 'guidelines', label: 'Guidelines' },
@@ -148,7 +147,7 @@ export default function Home() {
       </section>
 
       {/* The Umbrella Term */}
-      <section id="umbrella" className="py-16 px-4 bg-gray-50">
+      <section id="umbrella" className="py-16 px-4">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-8 text-gray-900">
             The Umbrella Term
@@ -174,13 +173,13 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Who Determines */}
-      <section id="who-determines" className="py-16 px-4">
+      {/* Who Determines (merged with Standards) */}
+      <section id="who-determines" className="py-16 px-4 bg-gray-50">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-8 text-gray-900">
             Who Determines What Constitutes Malpublishing?
           </h2>
-          <div className="space-y-4 text-gray-700 text-lg">
+          <div className="space-y-4 text-gray-700 text-lg mb-8">
             <p className="text-center">
               <strong>Your community does</strong>—but &ldquo;community&rdquo; isn&apos;t a single entity.
             </p>
@@ -189,33 +188,9 @@ export default function Home() {
               your industry, your organization, and your specific publication or channel. Each layer
               may set different standards, and you operate under all of them.
             </p>
-            <p>
-              A newsroom, a school, a social platform, and a government agency each define
-              different thresholds. What&apos;s unacceptable in journalism might be standard
-              practice in satire. The same organization may face different standards in
-              different regions.
-            </p>
-            <p>
-              This is why explicit publishing policies matter. Without them, standards
-              remain implicit, inconsistent, and unenforceable.
-            </p>
           </div>
-        </div>
-      </section>
 
-      {/* How Publishing Standards Layer */}
-      <section id="standards" className="py-16 px-4 bg-gray-50">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-8 text-gray-900">
-            How Publishing Standards Layer
-          </h2>
-          <div className="space-y-4 text-gray-700 text-lg mb-8">
-            <p>
-              Publishing standards don&apos;t exist in isolation—they stack. Just as legal frameworks
-              layer from international to national to local, publishing policies cascade through
-              multiple levels:
-            </p>
-          </div>
+          {/* Hierarchy Diagram */}
           <div className="bg-white rounded-lg shadow-sm p-6 mb-8 font-mono text-sm text-gray-600">
             <div className="space-y-1">
               <p>Jurisdiction <span className="text-gray-400">(national laws, press regulations)</span></p>
@@ -225,10 +200,13 @@ export default function Home() {
               <p className="pl-16">└── Publication <span className="text-gray-400">(specific channel or section)</span></p>
             </div>
           </div>
+
           <p className="text-gray-700 text-lg mb-8">
             The same action can be malpublishing in one context and acceptable in another.
             Consider these scenarios:
           </p>
+
+          {/* Examples */}
           <div className="space-y-4">
             <div className="bg-white rounded-lg p-5 shadow-sm border-l-4 border-[#0074ff]">
               <h4 className="font-semibold text-gray-900 mb-2">AI-Generated Images</h4>
@@ -256,42 +234,15 @@ export default function Home() {
               </p>
             </div>
           </div>
+
           <p className="text-[#0074ff] font-medium text-lg mt-8 text-center">
             This is why making your publishing policy explicit matters—it defines which layer you&apos;re operating at.
           </p>
         </div>
       </section>
 
-      {/* What Isn't Malpublishing */}
-      <section id="not-malpublishing" className="py-16 px-4">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-8 text-gray-900">
-            What Isn&apos;t Malpublishing
-          </h2>
-          <p className="text-gray-600 text-center mb-6">
-            While standards vary by context, most publishing communities share these baseline understandings:
-          </p>
-          <div className="bg-white rounded-lg shadow-sm p-8 border-l-4 border-green-500">
-            <p className="text-lg text-gray-700 mb-4">
-              Writing opinions, theories, or fiction doesn&apos;t constitute malpublishing
-              when practices remain ethical within the applicable standards.
-            </p>
-            <p className="text-gray-600">
-              Content must be <strong>clearly labeled</strong> appropriately, and audiences
-              shouldn&apos;t be deceived about the content&apos;s intent or factual accuracy.
-              A clearly marked opinion piece or satirical article isn&apos;t malpublishing—but
-              presenting fiction as fact is.
-            </p>
-            <p className="text-gray-500 text-sm mt-4 italic">
-              Note: Some communities may have stricter standards. Academic publishing, for example,
-              may consider certain practices malpublishing that would be acceptable elsewhere.
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* Examples of Malpublishing */}
-      <section id="examples" className="py-16 px-4 bg-gray-50">
+      <section id="examples" className="py-16 px-4">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-8 text-gray-900">
             Examples of Malpublishing
@@ -300,7 +251,7 @@ export default function Home() {
             These actions are commonly considered malpublishing in many publishing contexts.
             Whether they apply in your context depends on your applicable standards.
           </p>
-          <div className="bg-white rounded-lg shadow-sm p-8">
+          <div className="bg-white rounded-lg shadow-sm p-8 border border-gray-200">
             <ul className="space-y-4 text-gray-700">
               <li className="flex items-start gap-3">
                 <span className="text-[#0074ff] font-bold">•</span>
@@ -335,8 +286,36 @@ export default function Home() {
         </div>
       </section>
 
+      {/* What Isn't Malpublishing */}
+      <section id="not-malpublishing" className="py-16 px-4 bg-gray-50">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-8 text-gray-900">
+            What Isn&apos;t Malpublishing
+          </h2>
+          <p className="text-gray-600 text-center mb-6">
+            While standards vary by context, most publishing communities share these baseline understandings:
+          </p>
+          <div className="bg-white rounded-lg shadow-sm p-8 border-l-4 border-green-500">
+            <p className="text-lg text-gray-700 mb-4">
+              Writing opinions, theories, or fiction doesn&apos;t constitute malpublishing
+              when practices remain ethical within the applicable standards.
+            </p>
+            <p className="text-gray-600">
+              Content must be <strong>clearly labeled</strong> appropriately, and audiences
+              shouldn&apos;t be deceived about the content&apos;s intent or factual accuracy.
+              A clearly marked opinion piece or satirical article isn&apos;t malpublishing—but
+              presenting fiction as fact is.
+            </p>
+            <p className="text-gray-500 text-sm mt-4 italic">
+              Note: Some communities may have stricter standards. Academic publishing, for example,
+              may consider certain practices malpublishing that would be acceptable elsewhere.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Etymology */}
-      <section id="etymology" className="py-16 px-4 bg-gray-50">
+      <section id="etymology" className="py-16 px-4">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-8 text-gray-900">
             Etymology & Context
@@ -351,7 +330,7 @@ export default function Home() {
       </section>
 
       {/* Related Terms */}
-      <section id="related-terms" className="py-16 px-4">
+      <section id="related-terms" className="py-16 px-4 bg-gray-50">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-8 text-gray-900">
             Related Terms & Derivatives
@@ -378,7 +357,7 @@ export default function Home() {
       </section>
 
       {/* For Publishers: Baseline Practices */}
-      <section id="guidelines" className="py-16 px-4 bg-gray-50">
+      <section id="guidelines" className="py-16 px-4">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-4 text-gray-900">
             For Publishers: Baseline Practices
@@ -388,7 +367,7 @@ export default function Home() {
           </p>
           <div className="space-y-4">
             {GUIDELINES.map((guideline, index) => (
-              <div key={guideline.title} className="bg-white rounded-lg p-4 shadow-sm">
+              <div key={guideline.title} className="bg-white rounded-lg p-4 shadow-sm border border-gray-200">
                 <div className="flex items-start gap-3">
                   <span className="w-6 h-6 bg-green-500 text-white rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0">
                     {index + 1}
@@ -408,7 +387,7 @@ export default function Home() {
       </section>
 
       {/* Why This Term Exists */}
-      <section id="origin" className="py-16 px-4">
+      <section id="origin" className="py-16 px-4 bg-gray-50">
         <div className="max-w-2xl mx-auto">
           <h2 className="text-2xl font-bold text-center mb-8 text-gray-900">
             Why This Term Exists
