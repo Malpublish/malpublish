@@ -111,23 +111,8 @@ export default function Home() {
         </div>
       </nav>
 
-      {/* Hero Section */}
-      <section id="definition" className="bg-[#0074ff] text-white py-20 px-4">
-        <div className="max-w-3xl mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            Malpublish
-          </h1>
-          <p className="text-xl md:text-2xl opacity-90 mb-2 font-mono">
-            /mal-PUB-lish/ (verb)
-          </p>
-          <p className="text-2xl md:text-3xl">
-            &ldquo;To publish in a manner that constitutes malpractice&rdquo;
-          </p>
-        </div>
-      </section>
-
-      {/* Mobile Navigation */}
-      <nav className="lg:hidden overflow-x-auto bg-white border-b border-gray-200">
+      {/* Mobile Navigation - Sticky Top */}
+      <nav className="lg:hidden overflow-x-auto bg-white border-b border-gray-200 sticky top-0 z-40">
         <div className="flex gap-4 px-4 py-3 min-w-max">
           {SECTIONS.map(({ id, label }) => (
             <a
@@ -142,6 +127,21 @@ export default function Home() {
           ))}
         </div>
       </nav>
+
+      {/* Hero Section */}
+      <section id="definition" className="bg-[#0074ff] text-white py-20 px-4">
+        <div className="max-w-3xl mx-auto text-center">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+            Malpublish
+          </h1>
+          <p className="text-xl md:text-2xl opacity-90 mb-2 font-mono">
+            /mal-PUB-lish/ (verb)
+          </p>
+          <p className="text-2xl md:text-3xl">
+            &ldquo;To publish in a manner that constitutes malpractice&rdquo;
+          </p>
+        </div>
+      </section>
 
       {/* Why This Matters */}
       <section id="why-matters" className="py-16 px-4 bg-gray-50">
