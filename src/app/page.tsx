@@ -15,11 +15,26 @@ const RELATED_TERMS = [
 ]
 
 const GUIDELINES = [
-  { title: 'Verify facts with multiple sources', description: 'Cross-reference claims through credible, independent sources before publishing.' },
-  { title: 'Label content clearly', description: 'Distinguish news from opinion, editorial, sponsored content, and AI-generated material.' },
-  { title: 'Attribute and respect rights', description: 'Credit sources properly and honor intellectual property and licensing agreements.' },
-  { title: 'Correct errors promptly', description: 'When mistakes occur, fix them quickly and visibly—transparency builds trust.' },
-  { title: 'Maintain independence', description: 'Keep editorial decisions separate from advertiser or sponsor influence.' },
+  {
+    title: 'Label content clearly',
+    description: 'Be transparent about what the content is—news, opinion, satire, sponsored, AI-generated. Don\'t deceive audiences about intent.'
+  },
+  {
+    title: 'Don\'t overclaim',
+    description: 'State what you know, not more. Don\'t present speculation as fact or certainty you don\'t have.'
+  },
+  {
+    title: 'Attribute sources',
+    description: 'Credit where information comes from. Let readers verify claims themselves.'
+  },
+  {
+    title: 'Correct errors promptly',
+    description: 'When you learn something is wrong, fix it quickly and visibly. Being unreachable or feigning ignorance is itself malpublishing.'
+  },
+  {
+    title: 'Respect rights',
+    description: 'Honor intellectual property, privacy, and human dignity. Get permission when required.'
+  },
 ]
 
 const SECTIONS = [
@@ -29,9 +44,9 @@ const SECTIONS = [
   { id: 'who-determines', label: 'Who Determines' },
   { id: 'examples', label: 'Examples' },
   { id: 'not-malpublishing', label: 'Not Malpublishing' },
+  { id: 'best-practices', label: 'Best Practices' },
   { id: 'etymology', label: 'Etymology' },
   { id: 'related-terms', label: 'Related Terms' },
-  { id: 'guidelines', label: 'Guidelines' },
   { id: 'origin', label: 'Origin' },
   { id: 'call-to-action', label: 'Call to Action' },
 ]
@@ -39,6 +54,7 @@ const SECTIONS = [
 export default function Home() {
   const [showContact, setShowContact] = useState(false)
   const [activeSection, setActiveSection] = useState('definition')
+  const [showBackToTop, setShowBackToTop] = useState(false)
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -60,9 +76,17 @@ export default function Home() {
     return () => observer.disconnect()
   }, [])
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowBackToTop(window.scrollY > 500)
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
   return (
     <div className="min-h-screen">
-      {/* Progress Dots - Fixed Right Side */}
+      {/* Desktop Navigation - Fixed Right Side */}
       <nav className="fixed right-6 top-1/2 -translate-y-1/2 z-50 hidden lg:block">
         <div className="flex flex-col gap-3">
           {SECTIONS.map(({ id, label }) => (
@@ -101,6 +125,23 @@ export default function Home() {
           </p>
         </div>
       </section>
+
+      {/* Mobile Navigation */}
+      <nav className="lg:hidden overflow-x-auto bg-white border-b border-gray-200">
+        <div className="flex gap-4 px-4 py-3 min-w-max">
+          {SECTIONS.map(({ id, label }) => (
+            <a
+              key={id}
+              href={`#${id}`}
+              className={`text-sm whitespace-nowrap transition-colors ${
+                activeSection === id ? 'text-[#0074ff] font-medium' : 'text-gray-500'
+              }`}
+            >
+              {label}
+            </a>
+          ))}
+        </div>
+      </nav>
 
       {/* Why This Matters */}
       <section id="why-matters" className="py-16 px-4 bg-gray-50">
@@ -173,7 +214,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Who Determines (merged with Standards) */}
+      {/* Who Determines */}
       <section id="who-determines" className="py-16 px-4 bg-gray-50">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-8 text-gray-900">
@@ -300,13 +341,17 @@ export default function Home() {
               Writing opinions, theories, or fiction doesn&apos;t constitute malpublishing
               when practices remain ethical within the applicable standards.
             </p>
-            <p className="text-gray-600">
+            <p className="text-gray-600 mb-4">
               Content must be <strong>clearly labeled</strong> appropriately, and audiences
               shouldn&apos;t be deceived about the content&apos;s intent or factual accuracy.
               A clearly marked opinion piece or satirical article isn&apos;t malpublishing—but
               presenting fiction as fact is.
             </p>
-            <p className="text-gray-500 text-sm mt-4 italic">
+            <p className="text-gray-700 font-medium mb-4">
+              The key distinction is intent and response. An honest mistake—caught and corrected—isn&apos;t
+              malpublishing. Knowing about a problem and ignoring it, or being deliberately unreachable, is.
+            </p>
+            <p className="text-gray-500 text-sm italic">
               Note: Some communities may have stricter standards. Academic publishing, for example,
               may consider certain practices malpublishing that would be acceptable elsewhere.
             </p>
@@ -314,8 +359,41 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Best Practices */}
+      <section id="best-practices" className="py-16 px-4">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-4 text-gray-900">
+            Best Practices
+          </h2>
+          <p className="text-center text-gray-600 mb-8">
+            Mistakes happen. Forgetting to cite a source or publishing an error isn&apos;t automatically
+            malpublishing—it becomes malpublishing when you learn of the problem and don&apos;t fix it
+            promptly and visibly. What matters is intent and response. These practices help publishers
+            stay accountable:
+          </p>
+          <div className="space-y-4">
+            {GUIDELINES.map((guideline, index) => (
+              <div key={guideline.title} className="bg-white rounded-lg p-4 shadow-sm border border-gray-200">
+                <div className="flex items-start gap-3">
+                  <span className="w-6 h-6 bg-green-500 text-white rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0">
+                    {index + 1}
+                  </span>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-1">{guideline.title}</h4>
+                    <p className="text-gray-600 text-sm">{guideline.description}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+          <p className="text-center text-gray-600 mt-8">
+            Ready to go deeper? Build a publishing policy tailored to your community.
+          </p>
+        </div>
+      </section>
+
       {/* Etymology */}
-      <section id="etymology" className="py-16 px-4">
+      <section id="etymology" className="py-16 px-4 bg-gray-50">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-8 text-gray-900">
             Etymology & Context
@@ -330,7 +408,7 @@ export default function Home() {
       </section>
 
       {/* Related Terms */}
-      <section id="related-terms" className="py-16 px-4 bg-gray-50">
+      <section id="related-terms" className="py-16 px-4">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-8 text-gray-900">
             Related Terms & Derivatives
@@ -353,36 +431,6 @@ export default function Home() {
               </tbody>
             </table>
           </div>
-        </div>
-      </section>
-
-      {/* For Publishers: Baseline Practices */}
-      <section id="guidelines" className="py-16 px-4">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-4 text-gray-900">
-            For Publishers: Baseline Practices
-          </h2>
-          <p className="text-center text-gray-600 mb-8">
-            These are widely-adopted baseline practices that form the foundation of many publishing policies:
-          </p>
-          <div className="space-y-4">
-            {GUIDELINES.map((guideline, index) => (
-              <div key={guideline.title} className="bg-white rounded-lg p-4 shadow-sm border border-gray-200">
-                <div className="flex items-start gap-3">
-                  <span className="w-6 h-6 bg-green-500 text-white rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0">
-                    {index + 1}
-                  </span>
-                  <div>
-                    <h4 className="font-semibold text-gray-900 mb-1">{guideline.title}</h4>
-                    <p className="text-gray-600 text-sm">{guideline.description}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-          <p className="text-center text-gray-600 mt-8">
-            Ready to go deeper? Build a publishing policy tailored to your community.
-          </p>
         </div>
       </section>
 
@@ -488,6 +536,17 @@ export default function Home() {
           </p>
         </div>
       </footer>
+
+      {/* Back to Top Button */}
+      {showBackToTop && (
+        <button
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          className="fixed bottom-6 right-6 bg-[#0074ff] text-white w-10 h-10 rounded-full shadow-lg flex items-center justify-center hover:bg-[#0063dd] transition-colors z-50"
+          aria-label="Back to top"
+        >
+          ↑
+        </button>
+      )}
     </div>
   )
 }
