@@ -85,7 +85,7 @@ export default function Home() {
       <section id="definition" className="pt-16 pb-20 px-4 bg-[#0074ff] text-white">
         <div className="max-w-3xl mx-auto">
           {/* Word Entry */}
-          <div className="mb-8">
+          <div className="mb-8 text-center">
             <h1 className="text-5xl md:text-6xl font-sans font-bold mb-2">
               malpublish
             </h1>
@@ -95,20 +95,20 @@ export default function Home() {
           </div>
 
           {/* Definition Box */}
-          <div className="border-l-2 border-white/50 pl-6 py-2">
+          <div className="border-l-2 border-white/50 pl-6 py-2 max-w-xl mx-auto">
             <p className="text-2xl leading-relaxed">
               To publish in a manner that constitutes malpractice
             </p>
           </div>
 
           {/* Etymology Preview */}
-          <p className="mt-6 text-white/70 text-sm">
+          <p className="mt-6 text-white/70 text-sm text-center">
             <span className="font-semibold text-white">Origin:</span> 2023, coined by Roarke Clinton.
             From <em>mal-</em> (bad, wrongful) + <em>publish</em>, following the pattern of <em>malpractice</em>.
           </p>
 
           {/* Quick Links */}
-          <div className="mt-8 flex flex-wrap items-center gap-2 text-sm">
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-2 text-sm">
             <span className="text-white/60">Jump to:</span>
             {['Examples', 'Guidelines', 'Related Terms', 'Call to Action'].map((link, i) => (
               <span key={link} className="flex items-center gap-2">
@@ -128,7 +128,7 @@ export default function Home() {
       {/* Significance */}
       <section id="significance" className="py-16 px-4 bg-gray-50 border-b border-gray-200">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4 text-center">
             Why This Term Matters
           </h2>
           <div className="bg-white rounded-lg p-6 border-l-4 border-[#0074ff] shadow-sm">
@@ -158,7 +158,7 @@ export default function Home() {
       {/* Scope - The Umbrella Term */}
       <section id="scope" className="py-16 px-4 border-b border-gray-200">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
             Scope
           </h2>
 
@@ -201,7 +201,7 @@ export default function Home() {
       {/* Context - Who Determines + Standards Layer */}
       <section id="context" className="py-16 px-4 bg-gray-50 border-b border-gray-200">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
             Contextual Application
           </h2>
 
@@ -275,10 +275,10 @@ export default function Home() {
       {/* Examples */}
       <section id="examples" className="py-16 px-4 border-b border-gray-200">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl font-bold text-gray-900 mb-2">
+          <h2 className="text-3xl font-bold text-gray-900 mb-2 text-center">
             Examples of Malpublishing
           </h2>
-          <p className="text-gray-500 text-sm mb-6">
+          <p className="text-gray-500 text-sm mb-6 text-center">
             Actions commonly considered malpublishing in many publishing contexts.
             Applicability depends on your community&apos;s standards.
           </p>
@@ -305,7 +305,7 @@ export default function Home() {
       {/* Etymology */}
       <section id="etymology" className="py-16 px-4 bg-gray-50 border-b border-gray-200">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
             Etymology & Related Terms
           </h2>
 
@@ -338,10 +338,10 @@ export default function Home() {
       {/* Guidelines */}
       <section id="guidelines" className="py-16 px-4 border-b border-gray-200">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl font-bold text-gray-900 mb-2">
+          <h2 className="text-3xl font-bold text-gray-900 mb-2 text-center">
             Baseline Publishing Practices
           </h2>
-          <p className="text-gray-500 text-sm mb-8">
+          <p className="text-gray-500 text-sm mb-8 text-center">
             Widely-adopted practices that form the foundation of many publishing policies.
           </p>
 
@@ -377,7 +377,7 @@ export default function Home() {
       {/* Origin Story */}
       <section id="origin" className="py-16 px-4 bg-gray-50 border-b border-gray-200">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
             Why This Term Exists
           </h2>
 
