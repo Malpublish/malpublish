@@ -3,7 +3,7 @@ project: Malpublish
 stack: static
 services:
   github:
-    username: "InformationEcosystem"
+    username: "roar-gits"
     repo: "malpublish"
   deploy: GitHub Pages
 status: active
@@ -51,11 +51,10 @@ Workflow: `.github/workflows/deploy.yml`
 
 ## Credentials
 
-Shares credentials with PublishingPolicy (same InformationEcosystem org).
+Shares credentials with PublishingPolicy (same roar-gits account).
 
 ```bash
-echo $GITHUB_TOKEN                    # Should show token
-echo $PUBLISHINGPOLICY_GITHUB_TOKEN   # Same token (shared)
+echo $GITHUB_TOKEN                    # Should show token (shared hobby PAT)
 ```
 
 **Note**: GitHub Actions uses repo permissions for deployment. Claude needs the token for `git push`.
