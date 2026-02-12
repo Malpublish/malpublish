@@ -6,7 +6,6 @@ services:
     username: "roar-gits"
     repo: "malpublish"
   deploy: GitHub Pages
-status: active
 ---
 
 # Project Configuration - Malpublish Landing
