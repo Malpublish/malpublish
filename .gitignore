@@ -42,3 +42,6 @@ next-env.d.ts
 
 # tools
 .playwright-mcp/
+
+# direnv credentials
+.envrc
