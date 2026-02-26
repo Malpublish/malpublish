@@ -26,7 +26,9 @@ Static landing page for malpublish.org - explains the concept of "malpublishing"
 |---------|-------|
 | Stack | Next.js 16 (static export) |
 | URL | https://malpublish.org |
-| Deploy | GitHub Pages |
+| Deploy | Vercel (auto-deploy on push to main) |
+| Private repo | https://github.com/roar-gits/malpublish (origin) |
+| Public repo | https://github.com/Malpublish/malpublish (org remote) |
 | Status | Active |
 
 ---
@@ -42,9 +44,9 @@ npm run build        # Static export to ./out
 
 ## Deployment
 
-Automatic via GitHub Actions on push to `main`.
+Automatic via Vercel on push to `main` (origin).
 
-Workflow: `.github/workflows/deploy.yml`
+Public mirror at `Malpublish/malpublish` org — push to `org` remote after significant updates to keep the open-source repo current.
 
 ---
 

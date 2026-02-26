@@ -1,0 +1,18 @@
+name: Mirror to public org
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Push to Malpublish/malpublish
+        run: |
+          git remote add org https://x-access-token:${{ secrets.ORG_PAT }}@github.com/Malpublish/malpublish.git
+          git push org main
