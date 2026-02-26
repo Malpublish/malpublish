@@ -3,7 +3,7 @@ project: Malpublish
 stack: static
 services:
   github:
-    username: "roar-gits"
+    org: "Malpublish"
     repo: "malpublish"
   deploy: GitHub Pages
 ---
@@ -16,7 +16,7 @@ services:
 
 ## Overview
 
-Static landing page for malpublish.org - explains the concept of "malpublishing" and links to PublishingPolicy.org for the policy builder tool.
+Static landing page for malpublish.org - explains the concept of "malpublishing" and links to PublishingPolicy.org for the policy builder tool. Open source for transparency.
 
 ---
 
@@ -26,9 +26,8 @@ Static landing page for malpublish.org - explains the concept of "malpublishing"
 |---------|-------|
 | Stack | Next.js 16 (static export) |
 | URL | https://malpublish.org |
-| Deploy | Vercel (auto-deploy on push to main) |
-| Private repo | https://github.com/roar-gits/malpublish (origin) |
-| Public repo | https://github.com/Malpublish/malpublish (org remote) |
+| Deploy | GitHub Pages (via GitHub Actions on push to main) |
+| Repo | https://github.com/Malpublish/malpublish (public) |
 | Status | Active |
 
 ---
@@ -44,21 +43,17 @@ npm run build        # Static export to ./out
 
 ## Deployment
 
-Automatic via Vercel on push to `main` (origin).
-
-Public mirror at `Malpublish/malpublish` org — push to `org` remote after significant updates to keep the open-source repo current.
+Automatic via GitHub Actions on push to `main`. Workflow: `.github/workflows/deploy.yml`
 
 ---
 
 ## Credentials
 
-Shares credentials with PublishingPolicy (same roar-gits account).
+Uses org PAT from `~/.env.credentials/org-malpublish.env`.
 
 ```bash
-echo $GITHUB_TOKEN                    # Should show token (shared hobby PAT)
+echo $MALPUBLISH_GITHUB_TOKEN         # Org PAT for pushing
 ```
-
-**Note**: GitHub Actions uses repo permissions for deployment. Claude needs the token for `git push`.
 
 ---
 
