@@ -519,8 +519,8 @@ export default function Home() {
               </button>
             ) : (
               <div className="space-y-2">
-                <a href="mailto:stopmalpublishing@gmail.com" className="text-white hover:underline">
-                  stopmalpublishing@gmail.com
+                <a href="mailto:team@malpublish.org" className="text-white hover:underline">
+                  team@malpublish.org
                 </a>
                 <p className="text-xs text-gray-500 max-w-md mx-auto">
                   Due to high volume, I may not be able to respond to every inquiry—but I&apos;ll reach out if I can.
