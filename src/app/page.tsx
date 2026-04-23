@@ -103,8 +103,8 @@ export default function Home() {
               </span>
               <span className={`w-2 h-2 rounded-full transition-all ${
                 activeSection === id
-                  ? 'bg-[#0074ff] scale-125'
-                  : 'bg-gray-300 group-hover:bg-[#0074ff]/40'
+                  ? 'bg-primary scale-125'
+                  : 'bg-gray-300 group-hover:bg-primary/40'
               }`} />
             </a>
           ))}
@@ -119,7 +119,7 @@ export default function Home() {
               key={id}
               href={`#${id}`}
               className={`text-sm whitespace-nowrap transition-colors ${
-                activeSection === id ? 'text-[#0074ff] font-medium' : 'text-gray-500'
+                activeSection === id ? 'text-primary font-medium' : 'text-gray-500'
               }`}
             >
               {label}
@@ -129,7 +129,7 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section id="definition" className="bg-[#0074ff] text-white py-20 px-4">
+      <section id="definition" className="bg-primary text-white py-20 px-4">
         <div className="max-w-3xl mx-auto text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
             Malpublish
@@ -149,34 +149,34 @@ export default function Home() {
           <h2 className="text-3xl font-bold text-center mb-8 text-gray-900">
             Why This Matters
           </h2>
-          <div className="bg-white rounded-lg shadow-sm p-8 border-l-4 border-[#0074ff]">
+          <div className="bg-white rounded-lg shadow-sm p-8 border-l-4 border-primary">
             <p className="text-lg text-gray-700 mb-4">
               Publishing failures cause real harm. When publishers breach ethical standards,
               the consequences ripple through society:
             </p>
             <ul className="space-y-2 mb-6 text-gray-700">
               <li className="flex items-start gap-2">
-                <span className="text-[#0074ff] font-bold">•</span>
+                <span className="text-primary font-bold">•</span>
                 <span><strong>Misinformation</strong> — False information spreads and takes root</span>
               </li>
               <li className="flex items-start gap-2">
-                <span className="text-[#0074ff] font-bold">•</span>
+                <span className="text-primary font-bold">•</span>
                 <span><strong>Erosion of trust</strong> — Public loses faith in media, academia, and institutions</span>
               </li>
               <li className="flex items-start gap-2">
-                <span className="text-[#0074ff] font-bold">•</span>
+                <span className="text-primary font-bold">•</span>
                 <span><strong>Harm to individuals</strong> — Defamation, privacy violations, and reputation damage</span>
               </li>
               <li className="flex items-start gap-2">
-                <span className="text-[#0074ff] font-bold">•</span>
+                <span className="text-primary font-bold">•</span>
                 <span><strong>Social division</strong> — Inflammatory content that polarizes communities</span>
               </li>
               <li className="flex items-start gap-2">
-                <span className="text-[#0074ff] font-bold">•</span>
+                <span className="text-primary font-bold">•</span>
                 <span><strong>Economic harm</strong> — Fraudulent claims and deceptive advertising</span>
               </li>
               <li className="flex items-start gap-2">
-                <span className="text-[#0074ff] font-bold">•</span>
+                <span className="text-primary font-bold">•</span>
                 <span><strong>Health and safety risks</strong> — Dangerous medical or safety misinformation</span>
               </li>
             </ul>
@@ -207,7 +207,7 @@ export default function Home() {
               Whether a practice constitutes malpublishing depends on context. Each community defines its own
               publishing standards. What&apos;s unacceptable in one context may be acceptable in another.
             </p>
-            <p className="text-[#0074ff] font-medium">
+            <p className="text-primary font-medium">
               This is why publishing policies matter—they make standards explicit.
             </p>
           </div>
@@ -249,7 +249,7 @@ export default function Home() {
 
           {/* Examples */}
           <div className="space-y-4">
-            <div className="bg-white rounded-lg p-5 shadow-sm border-l-4 border-[#0074ff]">
+            <div className="bg-white rounded-lg p-5 shadow-sm border-l-4 border-primary">
               <h4 className="font-semibold text-gray-900 mb-2">AI-Generated Images</h4>
               <p className="text-gray-600">
                 A news outlet&apos;s standards require disclosure of any AI-generated visuals—publishing
@@ -257,7 +257,7 @@ export default function Home() {
                 contextually obvious, may have no such requirement.
               </p>
             </div>
-            <div className="bg-white rounded-lg p-5 shadow-sm border-l-4 border-[#0074ff]">
+            <div className="bg-white rounded-lg p-5 shadow-sm border-l-4 border-primary">
               <h4 className="font-semibold text-gray-900 mb-2">Sponsored Content</h4>
               <p className="text-gray-600">
                 Journalism ethics require clear separation of editorial and advertising. Influencer
@@ -266,7 +266,7 @@ export default function Home() {
                 own evolving standards.
               </p>
             </div>
-            <div className="bg-white rounded-lg p-5 shadow-sm border-l-4 border-[#0074ff]">
+            <div className="bg-white rounded-lg p-5 shadow-sm border-l-4 border-primary">
               <h4 className="font-semibold text-gray-900 mb-2">Cross-Regional Operations</h4>
               <p className="text-gray-600">
                 Organization X operating in California faces different disclosure requirements than
@@ -276,7 +276,7 @@ export default function Home() {
             </div>
           </div>
 
-          <p className="text-[#0074ff] font-medium text-lg mt-8 text-center">
+          <p className="text-primary font-medium text-lg mt-8 text-center">
             This is why making your publishing policy explicit matters—it defines which layer you&apos;re operating at.
           </p>
         </div>
@@ -295,31 +295,31 @@ export default function Home() {
           <div className="bg-white rounded-lg shadow-sm p-8 border border-gray-200">
             <ul className="space-y-4 text-gray-700">
               <li className="flex items-start gap-3">
-                <span className="text-[#0074ff] font-bold">•</span>
+                <span className="text-primary font-bold">•</span>
                 <span>Publishing <strong>AI-generated deepfakes</strong> without clear, overt disclosure</span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="text-[#0074ff] font-bold">•</span>
+                <span className="text-primary font-bold">•</span>
                 <span>A <strong>platform distributing content</strong> that violates its own publishing policy—or the standards of the community it affects</span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="text-[#0074ff] font-bold">•</span>
+                <span className="text-primary font-bold">•</span>
                 <span>Clickbait headlines deliberately designed to misrepresent the actual story</span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="text-[#0074ff] font-bold">•</span>
+                <span className="text-primary font-bold">•</span>
                 <span>Republishing someone&apos;s work without attribution or permission</span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="text-[#0074ff] font-bold">•</span>
+                <span className="text-primary font-bold">•</span>
                 <span>A publication ignoring corrections and doubling down on false claims</span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="text-[#0074ff] font-bold">•</span>
+                <span className="text-primary font-bold">•</span>
                 <span>Sponsored content disguised as independent journalism</span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="text-[#0074ff] font-bold">•</span>
+                <span className="text-primary font-bold">•</span>
                 <span>Rushing to publish sensational claims without basic fact-checking</span>
               </li>
             </ul>
@@ -468,7 +468,7 @@ export default function Home() {
       </section>
 
       {/* CTA */}
-      <section id="call-to-action" className="py-20 px-4 bg-[#0074ff] text-white">
+      <section id="call-to-action" className="py-20 px-4 bg-primary text-white">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-4">
             Take the Next Step
@@ -480,13 +480,13 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Link
               href="https://publishingpolicy.org/build"
-              className="inline-block bg-white text-[#0074ff] px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg min-w-[280px]"
+              className="inline-block bg-white text-primary px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg min-w-[280px]"
             >
               Build Your Publishing Policy
             </Link>
             <Link
               href="https://publishingpolicy.org"
-              className="inline-block bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-[#0074ff] transition-colors text-lg min-w-[280px]"
+              className="inline-block bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-primary transition-colors text-lg min-w-[280px]"
             >
               What Is a Publishing Policy?
             </Link>
@@ -530,7 +530,7 @@ export default function Home() {
           </div>
           <p className="text-sm mt-6 pt-4 border-t border-gray-700">
             Want to champion a healthier information ecosystem?{' '}
-            <a href="#" className="text-[#0074ff] hover:underline">
+            <a href="#" className="text-primary hover:underline">
               Support this project
             </a>
           </p>
@@ -541,7 +541,7 @@ export default function Home() {
       {showBackToTop && (
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          className="fixed bottom-6 right-6 bg-[#0074ff] text-white w-10 h-10 rounded-full shadow-lg flex items-center justify-center hover:bg-[#0063dd] transition-colors z-50"
+          className="fixed bottom-6 right-6 bg-primary text-white w-10 h-10 rounded-full shadow-lg flex items-center justify-center hover:bg-primary-dark transition-colors z-50"
           aria-label="Back to top"
         >
           ↑
